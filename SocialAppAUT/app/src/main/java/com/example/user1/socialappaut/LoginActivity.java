@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity{
     private TextView tvRegisterLink;
 
     //Test
+    //Test2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
