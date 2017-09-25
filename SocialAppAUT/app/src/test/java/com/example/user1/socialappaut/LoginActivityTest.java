@@ -6,9 +6,5 @@ package com.example.user1.socialappaut;
 
 public class LoginActivityTest {
 
-    public void usernameEmpty()
-    {
-
-    }
 }
 
