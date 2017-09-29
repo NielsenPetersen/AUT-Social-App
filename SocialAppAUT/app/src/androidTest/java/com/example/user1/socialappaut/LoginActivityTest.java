@@ -2,6 +2,7 @@ package com.example.user1.socialappaut;
 
 import android.app.Activity;
 import android.support.test.rule.ActivityTestRule;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.junit.Rule;
@@ -11,6 +12,7 @@ import org.junit.runners.JUnit4;
 import org.junit.Assert.*;
 
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.fail;
 
 
 /**
@@ -31,8 +33,17 @@ public class LoginActivityTest {
         assertNotNull(login.findViewById(R.id.etStudentID));
 
         TextView username = (TextView)login.findViewById(R.id.etStudentID);
+        TextView password = (TextView)login.findViewById(R.id.etPassword);
+        Button button = (Button)login.findViewById(R.id.btnLogin);
 
+        if(button.isActivated())
+        {
+            if(username.getText().toString().isEmpty() ||
+                    password.getText().toString().isEmpty())
+            {
+                fail("The field cannot be empty");
+            }
 
-
+        }
     }
 }
