@@ -13,9 +13,18 @@ public class StundentBoardFaculty {
     private String CULTSOC;
     private String MID;
 
-
-    public void getFaculty()
+    public String getFaculty()
     {
+        return this.faculty;
+    }
+
+    pulic void setFaculty(String faculty)
+    {
+        if(faculty.equals("DCT"))
+        {
+            this.faculty = DCT;
+        }
+
         
     }
 }
