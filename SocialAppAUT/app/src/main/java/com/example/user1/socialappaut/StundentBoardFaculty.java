@@ -18,13 +18,13 @@ public class StundentBoardFaculty {
         return this.faculty;
     }
 
-    pulic void setFaculty(String faculty)
+    public void setFaculty(String faculty)
     {
         if(faculty.equals("DCT"))
         {
             this.faculty = DCT;
         }
 
-        
+
     }
 }
