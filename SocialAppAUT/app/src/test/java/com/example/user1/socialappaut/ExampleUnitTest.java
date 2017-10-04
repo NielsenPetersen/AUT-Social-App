@@ -24,6 +24,7 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
+<<<<<<< HEAD
     @Test
     public void loginNotEmpty()
     {
@@ -72,5 +73,7 @@ public class ExampleUnitTest {
 
     }
 
+=======
+>>>>>>> 0bfd04341ec47a3ea4dadfd3855ffc0ae471a1d7
 
 }
