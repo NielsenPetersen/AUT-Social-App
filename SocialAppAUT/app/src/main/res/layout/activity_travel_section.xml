@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.user1.socialappaut.Menu">
 
+
     <android.support.design.widget.NavigationView
         app:headerLayout="@layout/header"
         android:layout_width="wrap_content"
