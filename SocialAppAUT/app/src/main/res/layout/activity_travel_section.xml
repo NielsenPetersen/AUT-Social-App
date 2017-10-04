@@ -17,6 +17,7 @@
         app:itemTextColor="@color/darkgray"
         app:itemIconTint="@color/darkgray"
         app:menu="@menu/menu_drawer">
+        // this
 
     </android.support.design.widget.NavigationView>
 
