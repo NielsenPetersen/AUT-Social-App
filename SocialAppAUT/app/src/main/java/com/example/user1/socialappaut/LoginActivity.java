@@ -79,44 +79,44 @@ public class LoginActivity extends AppCompatActivity{
 
 
                     @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
+        public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        //This checks the database to see if there is a matching student ID stored, If so
-                        if (dataSnapshot.child(etStudentID.getText().toString()).exists()) {
+            //This checks the database to see if there is a matching student ID stored, If so
+            if (dataSnapshot.child(etStudentID.getText().toString()).exists()) {
 
-                            noteDialog.dismiss();
+                noteDialog.dismiss();
 
-                            //This gets the users information if password is correct
-                            Users user = dataSnapshot.child(etStudentID.getText().toString()).getValue(Users.class);
+                //This gets the users information if password is correct
+                Users user = dataSnapshot.child(etStudentID.getText().toString()).getValue(Users.class);
 
-                            if (user.getPassword().equals(etPassword.getText().toString())) {
+                if (user.getPassword().equals(etPassword.getText().toString())) {
 
-                                Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT)
-                                        .show();
+                    Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT)
+                            .show();
 
-                                Intent campusSelectionIntent = new Intent(LoginActivity.this, CampusSelectionActivity.class);
-                                CurrentUser.currentUser = user;
-                                startActivity(campusSelectionIntent);
-                                finish();
-                            } else {
+                    Intent campusSelectionIntent = new Intent(LoginActivity.this, CampusSelectionActivity.class);
+                    CurrentUser.currentUser = user;
+                    startActivity(campusSelectionIntent);
+                    finish();
+                } else {
 
-                                Toast.makeText(LoginActivity.this, "Invalid Password", Toast.LENGTH_SHORT)
-                                        .show();
-                            }
+                    Toast.makeText(LoginActivity.this, "Invalid Password", Toast.LENGTH_SHORT)
+                            .show();
+                }
 
-                        } else{
+            } else{
 
-                            Toast.makeText(LoginActivity.this, "Invalid Student ID", Toast.LENGTH_SHORT)
-                                    .show();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(LoginActivity.this, "Invalid Student ID", Toast.LENGTH_SHORT)
+                        .show();
             }
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    });
+}
         });
     }
 }
