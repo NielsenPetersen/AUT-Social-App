@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity{
                 if (TextUtils.isEmpty(studentID) && TextUtils.isEmpty(password)) {
 
                     AlertDialog.Builder build = new AlertDialog.Builder(LoginActivity.this);
-                    build.setTitle("Ivalid Details")
+                    build.setTitle("Invalid Details")
                             .setMessage("Blank Information")
                             .setPositiveButton("Dismiss",null)
                             .create()
