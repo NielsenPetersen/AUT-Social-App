@@ -4,7 +4,7 @@ package com.example.user1.socialappaut;
  * Created by Darcy on 4/10/2017.
  */
 
-public class StundentBoardFaculty {
+public class StudentBoardFaculty {
 
     private String faculty;
     private String DCT;
